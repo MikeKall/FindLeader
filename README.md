@@ -3,5 +3,6 @@ This project is a leader election system between devices in the same network. Th
 
 # Setup
 
-1. You need to install nmap.
-2. All the files must be in the same folder.
+1. You need to have Debian or debian based operating system.
+2. Install nmap (sudo apt install nmap).
+3. All the files must be in the same folder.
