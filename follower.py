@@ -2,9 +2,9 @@ import socket
 from os import sys
 import time
 import RPi.GPIO as GPIO
-GPIO.setwarnings(False)
-GPIO.setmode(GPIO.BOARD)
-GPIO.setup(3, GPIO.OUT)
+#GPIO.setwarnings(False)
+#GPIO.setmode(GPIO.BOARD)
+#GPIO.setup(3, GPIO.OUT)
 
 
 retries=0
@@ -58,13 +58,13 @@ def is_char(s):
         else:
             return False
 
-# All the known commands that a follower can execute
+# "Do something" commands
 def PIcommands(com):
     if com == "ledon":
-        GPIO.output(3, GPIO.HIGH)
+        #GPIO.output(3, GPIO.HIGH)
         print("Leds on")
     elif com == "ledoff":
-        GPIO.output(3, GPIO.LOW)
+        #GPIO.output(3, GPIO.LOW)
         print("Leds on")
     elif com == "disconnect":
         print("Disconnecting from leader")
