@@ -9,5 +9,5 @@ This project is a leader election system between devices in the same network. Th
 
 # Execution
 
-1. Give execute permissions to the start.sh script
+1. Give execute permissions to the start.sh script (chmod +x start.sh).
 2. Execute the script from the same folder that the other 2 python scripts are.
