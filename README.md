@@ -13,4 +13,4 @@ from the start.sh file and set it as an integer
 
 1. Give execute permissions to the start.sh script (chmod +x start.sh).
 2. Execute the script from the same folder that the other 2 python scripts are.
-3. Execute for all the devices.
+3. Execute it for all the devices.
