@@ -9,11 +9,11 @@ hostname -I
 
 myIP="$( hostname -I )"
 
-IFS='.' read -ra i <<< "$myIP"
+# Deconstruct the IP address with delimiter '.'
+IFS='.' read -ra x <<< "$myIP"
 
-myNum=${i[3]}
-#myNum=0
-
+myNum=${x[3]}
+#myNum=0 
 # This list holds the nmap results
 scan=()
 
@@ -25,14 +25,14 @@ printf "\nSearching the network for other devices:\n"
 while IFS= read -r line; do
 	scan+=( "$line" )
 	# echo "${scan[$counter]}"
-	if [[ ${scan[$counter]} == *"${i[0]}.${i[1]}.${i[2]}"* ]]; then
+	if [[ ${scan[$counter]} == *"${x[0]}.${x[1]}.${x[2]}"* ]]; then
 		printf "\nFound ${scan[$counter]}"
 		devices+=( ".${scan[$counter]}" )
 	fi
 
 	counter=$(( $counter + 1 ))
 
-done < <( nmap -n -sn ${i[0]}.${i[1]}.${i[2]}.0/24 -oG - | awk '/Up$/{print $2}' )
+done < <( nmap -n -sn ${x[0]}.${x[1]}.${x[2]}.0/24 -oG - | awk '/Up$/{print $2}' )
 
 if [[ $counter == 1 ]]; then
 	printf "\nThere is no other device on the network"
@@ -88,8 +88,8 @@ else
 		printf "\n$(( $numberOfDevices - 1 )) follower(s)\n\n"
 		python3 leader.py
 	else
-		printf "Leader is ${i[0]}.${i[1]}.${i[2]}.$maxNum\n"
-		echo "${i[0]}.${i[1]}.${i[2]}.$maxNum" > leaderIP
+		printf "Leader is ${x[0]}.${x[1]}.${x[2]}.$maxNum\n"
+		echo "${x[0]}.${x[1]}.${x[2]}.$maxNum" > leaderIP
 		printf "\n>I am following\n"
 		python3 follower.py
 	fi

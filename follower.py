@@ -1,7 +1,7 @@
 import socket
 from os import sys
 import time
-import RPi.GPIO as GPIO
+#import RPi.GPIO as GPIO
 #GPIO.setwarnings(False)
 #GPIO.setmode(GPIO.BOARD)
 #GPIO.setup(3, GPIO.OUT)
@@ -58,7 +58,7 @@ def is_char(s):
         else:
             return False
 
-# "Do something" commands
+# All the known commands that a follower can execute
 def PIcommands(com):
     if com == "ledon":
         #GPIO.output(3, GPIO.HIGH)
