@@ -58,7 +58,7 @@ def is_char(s):
         else:
             return False
 
-# All the known commands that a follower can execute
+# "Do something" commands
 def PIcommands(com):
     if com == "ledon":
         #GPIO.output(3, GPIO.HIGH)
