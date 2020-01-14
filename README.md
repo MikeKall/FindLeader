@@ -7,7 +7,7 @@ This project is a leader election system between devices in an ad-hoc network. T
 2. Install nmap (sudo apt install nmap).
 3. All the files must be in the same folder.
 4. If you are not running this project on an ad-hoc network then you can change the $myNum variable
-from the start.sh file and set it as an integer 
+from the start.sh file and set it as an integer of your choice.
 
 # Execution
 
