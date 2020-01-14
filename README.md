@@ -1,5 +1,5 @@
 # FindLeader
-This project is a leader election system between devices in a network. The leader becomes the device with the biggest ip address. When the leadership is established then the leader becomes a server that the followers can connect to and recieve commands.
+This project is a leader election system between devices in the same network. The leader becomes the device with the biggest ip address. When the leadership is established then the leader becomes a server that the followers can connect to and recieve commands.
 
 # Setup
 
