@@ -1,4 +1,4 @@
-# Leader Election
+# IoT Leader Election
 This project is a leader election system between devices in an ad-hoc network. The leader becomes the device with the biggest ip address. When the leadership is established then the leader becomes a server that the followers can connect to and recieve commands.
 
 # Setup
